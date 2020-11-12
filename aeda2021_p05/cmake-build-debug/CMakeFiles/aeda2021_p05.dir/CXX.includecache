@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dtpreda30/MIEIC UBUNTU/aeda2021_p05/Tests/game.cpp
+game.h
+/home/dtpreda30/MIEIC UBUNTU/aeda2021_p05/Tests/game.h
+cstdlib
+-
+ctime
+-
+iostream
+-
+algorithm
+-
+
+/home/dtpreda30/MIEIC UBUNTU/aeda2021_p05/Tests/game.h
+kid.h
+/home/dtpreda30/MIEIC UBUNTU/aeda2021_p05/Tests/kid.h
+list
+-
+string
+-
+
+/home/dtpreda30/MIEIC UBUNTU/aeda2021_p05/Tests/kid.h
+string
+-
+sstream
+-
+

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dtpreda30/MIEIC UBUNTU/aeda2021_p06/Tests/counter.cpp
+queue
+-
+cstdlib
+-
+counter.h
+/home/dtpreda30/MIEIC UBUNTU/aeda2021_p06/Tests/counter.h
+exceptions.h
+/home/dtpreda30/MIEIC UBUNTU/aeda2021_p06/Tests/exceptions.h
+
+/home/dtpreda30/MIEIC UBUNTU/aeda2021_p06/Tests/counter.h
+iostream
+-
+queue
+-
+
+/home/dtpreda30/MIEIC UBUNTU/aeda2021_p06/Tests/exceptions.h
+string
+-
+
