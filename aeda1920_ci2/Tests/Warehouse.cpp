@@ -25,25 +25,73 @@ void Warehouse::addObject(Object o1) {
 
 
 int Warehouse::InsertObjectsInQueue(vector <Object> obj){
-    //TODO
-    return 0;
+    sort(obj.begin(), obj.end(), [](Object& first, Object& second){
+        return second.getSize() < first.getSize();
+    });
+    for(auto object : obj){
+        objects.push(object);
+    }
+    return obj.size();
 }
 
 Object Warehouse::RemoveObjectQueue(int maxSize){
-     //TODO
-     Object obj;
-     return obj;
+     Object obj("dummy", maxSize);
+     queue<Object> temp;
+     while(objects.front().getSize() > maxSize && !objects.empty()){
+         temp.push(objects.front());
+         objects.pop();
+     }
+     if(!objects.empty()){
+         obj = objects.front();
+         objects.pop();
+         while(!objects.empty()){
+             temp.push(objects.front());
+             objects.pop();
+         }
+     }
+    while(!temp.empty()){
+        objects.push(temp.front());
+        temp.pop();
+    }
+    return obj;
 }
 
 int Warehouse::addPackOfBoxes(vector <ThinTallBox> boV) {
-    //TODO
-    return 0;
+    for(auto& box : boV){
+        boxes.push(box);
+    }
+    return boxes.size();
 }
 
 
 vector<ThinTallBox> Warehouse::DailyProcessBoxes(){
-    //TODO
     vector<ThinTallBox> res;
+    queue<ThinTallBox> temp;
+    while(!boxes.empty()){
+        ThinTallBox box = boxes.front();
+        boxes.pop();
+        if(box.full()){
+            res.push_back(box);
+            continue;
+        }
+        else if(box.getContentSize() < box.getCapacity()){
+            if(RemoveObjectQueue(box.getCapacity() - box.getContentSize()).getName() != "dummy"){
+                box.insert(RemoveObjectQueue(box.getCapacity() - box.getContentSize()));
+            }
+            else{
+                box.insert(Object("dummy", 0));
+            }
+        }
+        if(box.getDays()){
+            res.push_back(box);
+            continue;
+        }
+        temp.push(box);
+    }
+    while(!temp.empty()){
+        boxes.push(temp.front());
+        temp.pop();
+    }
     return res;
 }
 
