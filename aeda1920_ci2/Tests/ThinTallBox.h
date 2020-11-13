@@ -16,6 +16,7 @@ public:
 	void remove(Object object);
 	const Object& next() const;
 	void sortObjects();
+	bool sortedCheck();
 };
 
 #endif /* SRC_THINTALLBOX_H_ */

@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1920_ci2/Tests/Box.h
+Object.h
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1920_ci2/Tests/Object.h
+
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1920_ci2/Tests/Object.h
+iostream
+-
+string
+-
+
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1920_ci2/Tests/ThinTallBox.cpp
+ThinTallBox.h
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1920_ci2/Tests/ThinTallBox.h
+WideFlatBox.h
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1920_ci2/Tests/WideFlatBox.h
+algorithm
+-
+
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1920_ci2/Tests/ThinTallBox.h
+stack
+-
+Box.h
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1920_ci2/Tests/Box.h
+
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1920_ci2/Tests/WideFlatBox.h
+vector
+-
+Box.h
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1920_ci2/Tests/Box.h
+

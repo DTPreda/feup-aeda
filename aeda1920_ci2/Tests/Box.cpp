@@ -35,7 +35,10 @@ bool Box::full() const {
 
 
 Object Box::removeNext() {
-	// TODO
-	Object res;
-	return res;
+	if(!this->empty()){
+	    Object res = next();
+	    remove(res);
+	    return res;
+	}
+	throw InaccessibleObjectException();
 }

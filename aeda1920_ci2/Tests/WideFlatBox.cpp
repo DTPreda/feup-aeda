@@ -23,5 +23,12 @@ void WideFlatBox::sortObjects() {
 
 
 void WideFlatBox::remove(Object object) {
-    // TODO
+    for(auto obj : objects){
+        if(object == obj){
+            objects.erase(std::remove(objects.begin(), objects.end(), obj), objects.end());
+            setContentSize(getContentSize() - object.getSize());
+            return;
+        }
+    }
+    throw InaccessibleObjectException(object);
 }

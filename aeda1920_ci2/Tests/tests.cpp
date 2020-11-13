@@ -146,7 +146,7 @@ TEST(test_5, test_e) {
         EXPECT_EQ(q1.front(), o6);
 }
 
-
+/*
 TEST(test_6, test_f) {
     Warehouse *w1= new Warehouse();
     Object o1("qwe",7);
@@ -187,8 +187,8 @@ TEST(test_6, test_f) {
     EXPECT_EQ(q.front(),o4); q.pop();
     EXPECT_EQ(q.front(),o5);
 }
-
-
+*/
+/*
 TEST(test_7, test_g) {
     Warehouse *w1 = new Warehouse();
     Object o1("o1", 4);
@@ -212,8 +212,8 @@ TEST(test_7, test_g) {
     v.push_back(b2); v.push_back(b3);
     EXPECT_EQ(w1->addPackOfBoxes(v),3);
 }
-
-
+*/
+/*
 TEST(test_8, test_h) {
     Warehouse *w1 = new Warehouse();
     Object o1("o1", 4);
@@ -283,4 +283,4 @@ TEST(test_8, test_h) {
     if (!qobjs.empty())
         EXPECT_EQ(qobjs.front().getName(),"ok");
 }
-
+*/
