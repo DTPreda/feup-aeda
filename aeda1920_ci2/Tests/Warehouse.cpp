@@ -75,14 +75,15 @@ vector<ThinTallBox> Warehouse::DailyProcessBoxes(){
             continue;
         }
         else if(box.getContentSize() < box.getCapacity()){
-            if(RemoveObjectQueue(box.getCapacity() - box.getContentSize()).getName() != "dummy"){
-                box.insert(RemoveObjectQueue(box.getCapacity() - box.getContentSize()));
+            Object obj = RemoveObjectQueue(box.getCapacity() - box.getContentSize());
+            if(obj.getName() != "dummy"){
+                box.insert(obj);
             }
             else{
                 box.insert(Object("dummy", 0));
             }
         }
-        if(box.getDays()){
+        if(box.getDays() == 0){
             res.push_back(box);
             continue;
         }

@@ -213,7 +213,7 @@ TEST(test_7, test_g) {
     EXPECT_EQ(w1->addPackOfBoxes(v),3);
 }
 
-/*
+
 TEST(test_8, test_h) {
     Warehouse *w1 = new Warehouse();
     Object o1("o1", 4);
@@ -283,4 +283,4 @@ TEST(test_8, test_h) {
     if (!qobjs.empty())
         EXPECT_EQ(qobjs.front().getName(),"ok");
 }
-*/
+
