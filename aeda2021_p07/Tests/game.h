@@ -15,6 +15,7 @@ public:
     Circle(int p=0, bool s=false): points(p), state(s), nVisits(0) {}
     int getPoints() const { return points; }
     bool getState() const { return state; }
+    void incrementVisits() { nVisits++; }
     void changeState() { if (state==false) state=true; else state=false; }
     int getNVisits() const { return nVisits; }
     friend ostream &operator << (ostream &os, Circle &c1);
