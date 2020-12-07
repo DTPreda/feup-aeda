@@ -4,20 +4,29 @@
 using namespace std;
 
 
-//TODO
 bool Bet::contains(unsigned num) const
 {
-	return true;
+	return numbers.count(num) != 0;
 }
 
-//TODO
 void Bet::generateBet(const vector<unsigned>& values, unsigned n)
 {
-
+    for(int i = 0, c = 0; c < n && i < values.size(); i++){
+        if(numbers.count(values[i]) == 0){
+            numbers.insert(values[i]);
+            c++;
+        }
+    }
 }
 
-//TODO
 unsigned Bet::countRights(const tabHInt& draw) const
 {
-	return 0;
+    unsigned c = 0;
+	tabHInt::const_iterator nIt, dIt;
+	for(nIt = numbers.begin(); nIt != numbers.end(); nIt++){
+        if(draw.count(*nIt) != 0){
+            c++;
+        }
+	}
+	return c;
 }
