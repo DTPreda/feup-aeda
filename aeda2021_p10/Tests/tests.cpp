@@ -151,7 +151,6 @@ TEST(test, c_packObjects){
     }
 }
 
-
 TEST(test, d_ObjectsNotPacked){
     PackagingMachine machine;
     EXPECT_EQ("No objects!\n", machine.printObjectsNotPacked());
@@ -216,4 +215,3 @@ TEST(test, f_BoxMoreObjects){
     EXPECT_EQ(5, bx.getID());
     EXPECT_EQ("Box 5 [ O1:2 O7:2 O6:4 ]", bx.printContent());
 }
-

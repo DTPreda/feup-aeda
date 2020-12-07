@@ -32,6 +32,7 @@ public:
     void addObject(Object& obj);
     static void resetID();
     unsigned getSize() const;
+    unsigned getNumObj() const { return objects.size(); };
     string printContent() const;
     bool operator<(const Box& b1) const;
 

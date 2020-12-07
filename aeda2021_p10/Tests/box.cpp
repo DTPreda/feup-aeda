@@ -1,8 +1,7 @@
 #include "box.h"
 #include <sstream>
 
-Object::Object(unsigned i, unsigned w): id(i), weight(w)
-{}
+Object::Object(unsigned i, unsigned w): id(i), weight(w) {}
 
 unsigned Object::getID() const {
     return id;
@@ -12,8 +11,7 @@ unsigned Object::getWeight() const {
     return weight;
 }
 
-Box::Box(unsigned cap): id(lastId++), capacity(cap), free(cap)
-{}
+Box::Box(unsigned cap): id(lastId++), capacity(cap), free(cap) {}
 
 unsigned Box::getID() const {
     return id;
@@ -28,7 +26,7 @@ void Box::addObject(Object& obj) {
     objects.push(obj);
 }
 
-void Box::resetID(){
+void Box::resetID() {
     lastId = 1;
 }
 
@@ -44,18 +42,21 @@ ostream& operator<<(ostream& os, Object obj) {
 
 unsigned Box::lastId = 1;
 
-
-// TODO
 bool Object::operator<(const Object& o1) const {
-	return true;
+	return weight < o1.getWeight();
 }
 
-// TODO
 bool Box::operator<(const Box& b1) const {
-	return true;
+	return free > b1.getFree();
 }
 
-// TODO
 string Box::printContent() const {
-	return "";
+	if(objects.empty()) return "Box " + to_string(id) + " empty!\n";
+	stringstream res; Object obj(0,0); StackObj temp = objects;
+	res << "Box " + to_string(id) + " [";
+	for(int i = objects.size(); i > 0; i--){
+	    obj = temp.top(); temp.pop();
+        res << " " << obj;
+	}
+	return res.str() + " ]";
 }
