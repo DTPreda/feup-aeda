@@ -1,4 +1,4 @@
-/snap/clion/135/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda2021_p07"
+/snap/clion/137/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda2021_p07"
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda2021_p07/cmake-build-debug
