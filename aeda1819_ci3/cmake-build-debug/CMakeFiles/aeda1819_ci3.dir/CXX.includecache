@@ -1,0 +1,66 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1819_ci3/Tests/BST.h
+iostream
+-
+stack
+-
+queue
+-
+
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1819_ci3/Tests/Client.h
+string
+-
+vector
+-
+tuple
+-
+
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1819_ci3/Tests/ClientRecord.h
+string
+-
+Client.h
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1819_ci3/Tests/Client.h
+
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1819_ci3/Tests/Property.h
+string
+-
+Client.h
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1819_ci3/Tests/Client.h
+
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1819_ci3/Tests/PropertyTypeItem.h
+Property.h
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1819_ci3/Tests/Property.h
+Client.h
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1819_ci3/Tests/Client.h
+string
+-
+
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1819_ci3/Tests/REAgency.cpp
+REAgency.h
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1819_ci3/Tests/REAgency.h
+algorithm
+-
+
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1819_ci3/Tests/REAgency.h
+BST.h
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1819_ci3/Tests/BST.h
+vector
+-
+iostream
+-
+unordered_set
+-
+queue
+-
+ClientRecord.h
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1819_ci3/Tests/ClientRecord.h
+PropertyTypeItem.h
+/home/dtpreda30/MIEIC UBUNTU/feup-aeda/aeda1819_ci3/Tests/PropertyTypeItem.h
+
